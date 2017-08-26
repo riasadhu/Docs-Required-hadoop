@@ -14,7 +14,7 @@ export HIVE_HOME=/usr/local/hive
 export PATH=$PATH:$HIVE_HOME/bin
 export PATH=$PATH:$HIVE_HOME/bin
 
-xport PATH=$PATH:/usr/local/pig/bin
+export PATH=$PATH:/usr/local/pig/bin
 
 export SCALA_HOME=/usr/local/src/scala/scala-2.10.4
 export PATH=$SCALA_HOME/bin:$PATH
@@ -24,7 +24,7 @@ export SPARK_HOME=/usr/local/spark
 export PATH=$PATH:/usr/local/spark/bin
 
 export SQOOP_HOME=/usr/local/sqoop
-xport PATH=$PATH:/usr/local/pig/bin
+export PATH=$PATH:/usr/local/pig/bin
 
 export SCALA_HOME=/usr/local/src/scala/scala-2.10.4
 export PATH=$SCALA_HOME/bin:$PATH
@@ -33,4 +33,11 @@ export PATH=$SCALA_HOME/bin:$PATH
 export SPARK_HOME=/usr/local/spark
 export PATH=$PATH:/usr/local/spark/bin
 
-export SQOOP_HOME=/usr/local/sqoop
+export SQOOP_HOME=/usr/local/sqoop/lib
+export SQOOP_CONF_DIR=$SQOOP_HOME/conf
+export SQOOP_CLASSPATH=$SQOOP_CONF_DIR:$SQOOP_HOME/lib:$SQOOP_HOME
+export PATH="$SQOOP_HOME/bin:$PATH"
+export SQOOP_JAR_DIR=$SQOOP_HOME
+export HADOOP_CLASSPATH=$HADOOP_CLASSPATH:$SQOOP_CLASSPATH
+export SQOOP_USER_CLASSPATH=$SQOOP_HOME
+
